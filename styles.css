@@ -63,3 +63,39 @@ body{font-size:15px}
 .details-cta{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #596064;margin-top:28px;padding-top:20px;color:#c5cbcc;font-size:13px}
 .details-cta .text-link{color:#ef8c82}
 @media(max-width:680px){.section{padding-top:78px;padding-bottom:78px}.hero-copy{font-size:14px}.intro-text p,.geo-copy p,.approach-layout p,.request-copy>p{font-size:14px}.details-heading{display:block}.details-heading>p{font-size:14px;margin-top:18px}.details-cards{grid-template-columns:1fr}.detail-card{min-height:200px}.details-cta{align-items:flex-start;flex-direction:column}.service-card p{font-size:13px}}
+
+/* v8 conversion upgrade */
+.button-cta{background:#292d30;color:#fff;border-color:#292d30;box-shadow:0 0 0 3px rgba(239,140,130,.35);font-size:11px;padding:14px 18px}.button-cta:hover{background:#ef8c82;color:#292d30;border-color:#ef8c82}
+.lang-switch{font-size:12px}:focus-visible{outline:2px solid #d97870;outline-offset:3px}
+.quick{display:flex;align-items:center;gap:8px;background:#fff;padding:8px;margin-top:28px;max-width:600px;box-shadow:0 14px 40px #29323620;border-radius:3px}.quick input{flex:1;min-width:0;border:0;border-bottom:2px solid transparent;padding:13px 10px;font:inherit;font-size:14px;outline:none;background:transparent}.quick input:focus{border-color:#ef8c82}.qarrow{color:#d97870;font-weight:800}.quick .button{white-space:nowrap;gap:10px;padding:15px 18px}
+.hero-buttons{margin-top:18px}.hero-note{margin-top:34px}
+.cargo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}.cargo article{background:#fff;border:1px solid #e2e4e4;border-top:3px solid #ef8c82;padding:24px}.cargo b{font-size:17px;letter-spacing:-.3px}.cargo p{font-size:14px;line-height:1.75;color:#687074;margin:12px 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border:1px solid #dfe2e2}.stats>div{padding:26px 22px;border-right:1px solid #dfe2e2;display:flex;flex-direction:column;gap:10px}.stats>div:last-child{border:0}.stats b{font-size:18px;line-height:1.3;letter-spacing:-.4px}.stats span{font-size:13px;line-height:1.7;color:#74797c}
+.imap{height:auto;background:#e9ebeb;padding:14px}.imap svg{width:100%;display:block}.kz{fill:#fff;stroke:#b7bbbd;stroke-width:1.5}.routes path{fill:none;stroke:#ef8c82;stroke-width:1.6;stroke-dasharray:5 7;animation:dash 24s linear infinite}@keyframes dash{to{stroke-dashoffset:-240}}
+.node{cursor:pointer}.node circle{fill:#d97870;stroke:#fff;stroke-width:3;transition:r .2s}.node.intl circle{fill:#303639}.node text{font:700 13px Manrope,Arial,sans-serif;fill:#303639;paint-order:stroke;stroke:#fff;stroke-width:4px}.node:hover circle,.node:focus-visible circle,.node.on circle{r:11}.node.hub circle{r:10}.node:focus-visible{outline:none}
+.map-info{background:#fff;padding:16px 18px;font-size:14px;line-height:1.7;color:#4d5559;margin-top:10px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.map-info .button{padding:11px 14px}
+.faq{background:#fff}.faq-list{margin-top:36px;max-width:860px;border-top:1px solid #dfe2e2}.faq details{border-bottom:1px solid #dfe2e2}.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:800;font-size:17px;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:26px;color:#d97870;transition:transform .2s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{margin:0 0 22px;font-size:15px;line-height:1.85;color:#687074;max-width:700px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.consent{display:flex!important;gap:10px;align-items:flex-start}.consent input{width:18px;height:18px;margin-top:2px;accent-color:#d97870}.consent>span{font-size:12px!important;font-weight:500!important;line-height:1.6;margin:0!important}.consent a{border-bottom:1px solid #ef8c82}.hp{position:absolute;left:-9999px}.form-status.ok{color:#2f7a4d}
+@media(max-width:900px){.cargo,.stats{grid-template-columns:1fr 1fr}.stats>div:nth-child(2){border-right:0}.stats>div:nth-child(-n+2){border-bottom:1px solid #dfe2e2}.nav{font-size:13px}}
+@media(max-width:680px){.quick{flex-wrap:wrap}.quick input{flex:1 1 40%}.qarrow{display:none}.quick .button{width:100%}.cargo,.stats,.two{grid-template-columns:1fr}.stats>div{border-right:0;border-bottom:1px solid #dfe2e2}.hero{min-height:860px}.lang-switch{font-size:11px}.header-actions{gap:8px}}
+@media(prefers-reduced-motion:reduce){.routes path{animation:none}html{scroll-behavior:auto}}
+.truck-photo{position:relative;z-index:2;width:100%;max-width:760px;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:4px;box-shadow:0 30px 60px rgba(30,36,40,.28);margin-top:60px}
+.has-photo .truck,.has-photo .orbit{display:none}
+@media(max-width:680px){.truck-photo{margin-top:0}}
+
+/* v9 — концепция 1: фото-hero, тёмные блоки */
+body{font-family:Inter,Manrope,Arial,sans-serif}h1,h2,h3,.stats b,.cargo b,.faq summary,.button{font-family:Montserrat,Inter,Arial,sans-serif}
+.hero{background:linear-gradient(90deg,rgba(18,22,25,.88) 0%,rgba(18,22,25,.5) 55%,rgba(18,22,25,.12) 100%),linear-gradient(115deg,#1b2024 0%,#3a2f2d 55%,#c9774d 100%);color:#fff;min-height:660px}
+.hero-grid,.route-label,.art-caption,.orbit{display:none}.has-photo .hero-art{display:none}
+.hero h1{color:#fff;letter-spacing:-2px}.hero .eyebrow{color:#f1c7c1}.hero-copy{color:#e4e7e8}.hero-note{color:#d3d7d8}.hero-bottom{color:#c7cccd;border-color:rgba(255,255,255,.22)}
+.hero .button-ghost{color:#fff;border-color:rgba(255,255,255,.7)}.hero .button-ghost:hover{background:rgba(255,255,255,.14)}
+.hero-art{opacity:.95}.truck{filter:drop-shadow(0 24px 24px rgba(0,0,0,.45))}
+.benefits{background:#fff;padding:0 clamp(20px,8vw,125px)}.benefits .stats{margin:0;border:0;border-bottom:1px solid #e4e6e6}.benefits .stats>div{padding:34px 24px 34px 0;border-right:0}.benefits .stats>div+div{padding-left:24px;border-left:1px solid #e4e6e6}.benefits .stats b{color:#d97870}.benefits .stats b::before{content:"";display:block;width:34px;height:3px;background:#ef8c82;margin-bottom:16px}
+.request{background:#1e2326;color:#fff}.request .section-kicker,.request-copy>p{color:#b9bfc1}.request h2{color:#fff}.request .quick-links a{color:#e8ebec}.request .quick-links a:hover{color:#ef8c82}
+@media(max-width:900px){.benefits .stats>div:nth-child(odd){padding-left:0;border-left:0}.benefits .stats>div{border-bottom:1px solid #e4e6e6}}
+@media(max-width:680px){.benefits .stats>div,.benefits .stats>div+div{padding:22px 0;border-left:0}.hero{background-position:70% center}}
+
+/* v9.1 — позиция фото: фура правее и выше */
+.hero::before{content:"";position:absolute;z-index:0;right:0;top:-16%;width:68%;height:118%;background:linear-gradient(90deg,rgba(18,22,25,.45),transparent 55%),url(hero-truck.jpg) 50% 50%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+@media(max-width:900px){.hero::before{width:80%}}
+@media(max-width:680px){.hero::before{width:100%;height:46%;top:auto;bottom:48px;background-position:60% 50%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 35%);mask-image:linear-gradient(180deg,transparent 0,#000 35%)}}

@@ -7,8 +7,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<meta name="description" content="ADI Group Company — автомобильные грузоперевозки по Казахстану и международным направлениям.">
-<title>ADI Group Company — логистика</title>
+<meta name="description" content="ADI Group Company — автомобильные грузоперевозки для бизнеса по Казахстану и СНГ: тентованные фуры, рефрижераторы, негабарит, сборные грузы. Расчёт стоимости онлайн.">
+<title>ADI Group Company — грузоперевозки по Казахстану и СНГ | Павлодар</title>
+<link rel="canonical" href="https://adigroup.kz/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="ADI Group Company"><meta property="og:locale" content="ru_RU"><meta property="og:url" content="https://adigroup.kz/"><meta property="og:title" content="ADI Group Company — грузоперевозки по Казахстану и СНГ"><meta property="og:description" content="Тентованные фуры, рефрижераторы, негабарит, сборные грузы. Рассчитайте стоимость перевозки онлайн."><meta property="og:image" content="https://adigroup.kz/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ADI Group Company — грузоперевозки"><meta name="twitter:image" content="https://adigroup.kz/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://adigroup.kz/#org","name":"ADI Group Company","legalName":"ТОО «ADI Group Company»","url":"https://adigroup.kz/","logo":"https://adigroup.kz/adi-logo.png","email":"info@adigroup.kz","telephone":"+77028553327","taxID":"170940003684","address":{"@type":"PostalAddress","streetAddress":"ул. Торговая 11/6, офис 15","addressLocality":"Павлодар","addressCountry":"KZ"},"contactPoint":{"@type":"ContactPoint","telephone":"+77028553327","contactType":"sales","availableLanguage":["ru","kk","en"]}},{"@type":"LogisticsService","name":"Автомобильные грузоперевозки","serviceType":"Road freight: tented trucks, refrigerated, oversize, LTL/FTL","provider":{"@id":"https://adigroup.kz/#org"},"areaServed":["KZ","RU","CN","UZ"],"url":"https://adigroup.kz/#services"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,11 +26,12 @@
     <a href="#about" data-i18n="navAbout">О компании</a>
     <a href="#services" data-i18n="navServices">Услуги</a>
     <a href="#geography" data-i18n="navGeo">География</a>
+    <a href="#faq" data-i18n="navFaq">FAQ</a>
     <a href="#contacts" data-i18n="navContacts">Контакты</a>
   </nav>
   <div class="header-actions">
-    <div class="lang-switch" aria-label="Язык"><button class="lang active" data-lang="ru">RU</button><span>/</span><button class="lang" data-lang="kk">KZ</button></div>
-    <a class="button button-small" href="#request" data-i18n="request">Оставить заявку</a>
+    <div class="lang-switch" aria-label="Язык"><button class="lang active" data-lang="ru">RU</button><span>|</span><button class="lang" data-lang="kk">KZ</button><span>|</span><button class="lang" data-lang="en">EN</button></div>
+    <a class="button button-small button-cta" href="#request" data-i18n="request">Оставить заявку</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
   </div>
 </header>
@@ -38,15 +44,16 @@
     <h1 data-i18n="heroTitle">Перевозки грузов<br><em>по Казахстану</em><br>и за его пределами</h1>
     <p class="hero-copy" data-i18n="heroCopy">ADI Group Company организует автомобильные грузоперевозки для корпоративных клиентов по Казахстану и международным направлениям.</p>
     <div class="hero-buttons">
-      <a class="button" href="#request" data-i18n="request">Оставить заявку <span>↗</span></a>
       <a class="button button-ghost" href="#services" data-i18n="learn">Наши услуги</a>
     </div>
+    <form class="quick" id="quickForm"><input name="from" required data-i18n-ph="qFrom" placeholder="Откуда" aria-label="Откуда" autocomplete="off"><span class="qarrow">→</span><input name="to" required data-i18n-ph="qTo" placeholder="Куда" aria-label="Куда" autocomplete="off"><button class="button" type="submit" data-i18n="qBtn">Рассчитать стоимость</button></form>
     <div class="hero-note"><span class="line"></span><span data-i18n="heroNote">Собственный транспорт и партнёрские перевозчики</span></div>
   </div>
   <div class="hero-art" aria-label="Иллюстрация грузового автомобиля">
     <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
     <div class="route-label label-a"><span class="dot"></span> KZ <small data-i18n="routeLocal">Казахстан</small></div>
     <div class="route-label label-b"><span class="dot lime"></span><span data-i18n="routeIntl">Международные направления</span></div>
+    <img src="hero-truck.jpg" alt="" hidden onload="document.querySelector('.hero').classList.add('has-photo')">
     <svg class="truck" viewBox="0 0 660 360" role="img" aria-label="Грузовой автомобиль">
       <defs><linearGradient id="cab" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f9fa"/><stop offset="1" stop-color="#9ea8ad"/></linearGradient><linearGradient id="trailer" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e9eef0"/><stop offset="1" stop-color="#8a969c"/></linearGradient></defs>
       <ellipse cx="333" cy="310" rx="280" ry="22" fill="#000" opacity=".35"/>
@@ -73,6 +80,13 @@
   <div class="hero-bottom"><span>ADI GROUP COMPANY</span><span data-i18n="heroBottom">НАДЁЖНАЯ КОММУНИКАЦИЯ. ПОНЯТНАЯ ЛОГИСТИКА.</span><span>01 — 04</span></div>
 </section>
 
+<section class="benefits"><div class="stats">
+    <div><b data-i18n="s1">Собственный и партнёрский автопарк</b><span data-i18n="s1x"></span></div>
+    <div><b data-i18n="s2">Работаем с юридическими лицами</b><span data-i18n="s2x"></span></div>
+    <div><b data-i18n="s3">Страхование груза</b><span data-i18n="s3x"></span></div>
+    <div><b data-i18n="s4">Отслеживание 24/7</b><span data-i18n="s4x"></span></div>
+  </div></section>
+
 <section class="intro section" id="about">
   <div class="section-kicker"><span>01</span><span data-i18n="aboutKicker">О КОМПАНИИ</span></div>
   <div class="intro-layout">
@@ -90,14 +104,23 @@
     <a href="#request" class="round-arrow" aria-label="Оставить заявку">↗</a>
   </div>
   <div class="service-foot"><span data-i18n="serviceFoot">Условия и возможность перевозки уточняются индивидуально.</span><span>ADI / 01</span></div>
+
+  <div class="cargo">
+    <article><b data-i18n="c1t">Тентованные фуры</b><p data-i18n="c1x"></p></article>
+    <article><b data-i18n="c2t">Рефрижераторы</b><p data-i18n="c2x"></p></article>
+    <article><b data-i18n="c3t">Негабаритные перевозки</b><p data-i18n="c3x"></p></article>
+    <article><b data-i18n="c4t">Сборные грузы (LTL) и FTL</b><p data-i18n="c4x"></p></article>
+  </div>
 </section>
 
 <section class="geography section" id="geography">
   <div class="geo-copy"><div class="section-kicker"><span>03</span><span data-i18n="geoKicker">ГЕОГРАФИЯ</span></div><h2 data-i18n="geoTitle">Казахстан.<br><em>Международные</em><br>направления.</h2><p data-i18n="geoText">Работаем с запросами на автомобильные перевозки по территории Казахстана и за его пределами. Конкретные направления и условия согласовываются при обращении.</p><a class="button button-dark" href="#request" data-i18n="discussRoute">Обсудить маршрут ↗</a></div>
-  <div class="map-visual">
-    <div class="map-grid"></div><svg viewBox="0 0 600 400" class="map-lines" aria-hidden="true"><path d="M60 240 C160 80 250 330 350 170 S500 110 555 60" fill="none" stroke="#ef8c82" stroke-width="2" stroke-dasharray="5 8"/><path d="M60 240 C170 290 230 150 350 170 S470 300 555 330" fill="none" stroke="#ef8c82" stroke-width="1.5" stroke-dasharray="3 9" opacity=".55"/><circle cx="60" cy="240" r="7" fill="#ef8c82"/><circle cx="350" cy="170" r="7" fill="#ef8c82"/><circle cx="555" cy="60" r="7" fill="#ef8c82"/><circle cx="555" cy="330" r="7" fill="#ef8c82"/></svg>
-    <div class="map-tag tag-one"><span class="dot lime"></span><b>КАЗАХСТАН</b><small data-i18n="mapBase">Базовая география</small></div><div class="map-tag tag-two"><span class="dot"></span><b data-i18n="mapBeyond">МЕЖДУНАРОДНЫЕ</b><small data-i18n="mapRoutes">Направления по запросу</small></div>
-    <div class="map-watermark">ADI<br><span>GROUP</span></div>
+  <div class="map-visual imap">
+    <svg viewBox="0 0 640 360" id="kzmap" role="group" aria-label="Карта">
+      <polygon class="kz" points="60,70 150,55 250,40 330,20 420,40 500,25 560,70 590,140 520,200 560,250 470,300 400,310 350,300 280,330 240,260 120,200 40,140"/>
+      <g class="routes"></g><g class="nodes"></g>
+    </svg>
+    <div class="map-info" id="mapInfo" aria-live="polite"></div>
   </div>
 </section>
 
@@ -106,8 +129,6 @@
   <div class="approach-layout"><h2 data-i18n="approachTitle">Ресурсы компании<br><em>и партнёрская сеть.</em></h2><p data-i18n="approachText">Для организации автомобильных перевозок используются собственный транспорт и транспорт партнёров. Состав решения зависит от параметров конкретного запроса.</p></div>
   <div class="approach-strip"><div><span class="strip-symbol">01</span><b data-i18n="ownFleet">Собственный транспорт</b></div><div><span class="strip-symbol">02</span><b data-i18n="partners">Партнёрские перевозчики</b></div><div><span class="strip-symbol">03</span><b data-i18n="b2b">Взаимодействие с бизнесом</b></div></div>
 </section>
-
-
 
 <section class="details section" id="how-to-start">
   <div class="section-kicker"><span>05</span><span data-i18n="detailsKicker">КАК НАЧАТЬ</span></div>
@@ -125,21 +146,32 @@
 
 <section class="request section" id="request">
   <div class="request-copy"><div class="section-kicker"><span>05</span><span data-i18n="requestKicker">ОБСУДИМ ВАШ ГРУЗ</span></div><h2 data-i18n="requestTitle">Есть задача<br>по перевозке?<br><em>Давайте обсудим.</em></h2><p data-i18n="requestText">Оставьте контактные данные и кратко опишите запрос. Свяжитесь с ADI Group удобным способом.</p><div class="quick-links"><a href="https://wa.me/77028553327" target="_blank" rel="noopener">◉ WhatsApp ↗</a><a href="tel:+77028553327">⌕ +7 702 855 3327</a><a href="mailto:info@adigroup.kz">✉ info@adigroup.kz</a></div></div>
-  <form class="request-form" id="leadForm">
-    <label><span data-i18n="formName">Ваше имя</span><input name="name" required placeholder="Имя"></label>
-    <label><span data-i18n="formCompany">Компания</span><input name="company" placeholder="Название компании"></label>
-    <label><span data-i18n="formPhone">Телефон или Email</span><input name="contact" required placeholder="+7 ..."></label>
-    <label><span data-i18n="formRoute">Направление перевозки</span><input name="route" placeholder="Откуда — куда"></label>
-    <label><span data-i18n="formMessage">Кратко о задаче</span><textarea name="message" rows="3" placeholder="Тип груза, сроки или другие детали"></textarea></label>
-    <button class="button submit-button" type="submit"><span data-i18n="sendRequest">Подготовить обращение</span><span>↗</span></button>
-    <p class="form-note" data-i18n="formNote">Откроется ваше почтовое приложение с подготовленным письмом. Отправка не происходит автоматически.</p>
+  <form class="request-form" id="leadForm" novalidate>
+    <label><span data-i18n="formName">Ваше имя</span><input name="name" required autocomplete="name"></label>
+    <label><span data-i18n="fPhone">Телефон / WhatsApp</span><input name="phone" type="tel" required placeholder="+7 ..." autocomplete="tel"></label>
+    <div class="two"><label><span data-i18n="fFrom">Город отправления</span><input name="from" required></label><label><span data-i18n="fTo">Город назначения</span><input name="to" required></label></div>
+    <label><span data-i18n="fCargo">Тип и вес груза</span><input name="cargo" data-i18n-ph="fCargoPh" placeholder="Например: паллеты, 20 т"></label>
+    <label><span data-i18n="formMessage">Комментарий</span><textarea name="message" rows="3"></textarea></label>
+    <label class="consent"><input type="checkbox" name="consent" required><span><span data-i18n="fConsent">Согласен(на) с</span> <a href="privacy.html" target="_blank" rel="noopener" data-i18n="fPolicy">политикой конфиденциальности</a></span></label>
+    <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="button submit-button" type="submit"><span data-i18n="sendReq">Отправить заявку</span><span>↗</span></button>
     <p class="form-status" id="formStatus" role="status"></p>
   </form>
 </section>
+
+<section class="faq section" id="faq">
+  <h2 data-i18n="faqTitle">Частые вопросы</h2>
+  <div class="faq-list">
+    <details><summary data-i18n="f1q">Какое минимальное время подачи транспорта?</summary><p data-i18n="f1a"></p></details>
+    <details><summary data-i18n="f2q">Как происходит страхование груза?</summary><p data-i18n="f2a"></p></details>
+    <details><summary data-i18n="f3q">Работаете ли вы с НДС?</summary><p data-i18n="f3a"></p></details>
+  </div>
+</section>
+<!-- TODO: блок «Наши клиенты» — добавьте реальные логотипы с разрешения клиентов: <section class="clients section"><img src="clients/xxx.svg" alt="..."></section> -->
 </main>
 
 <footer class="footer" id="contacts">
-  <div class="footer-top"><div class="footer-brand"><div class="footer-mark">ADI<span>↗</span></div><p data-i18n="footerDesc">Автомобильные грузоперевозки<br>для корпоративных клиентов.</p></div><div class="footer-contact"><span class="footer-label" data-i18n="footerContact">КОНТАКТЫ</span><a href="tel:+77028553327">+7 702 855 3327</a><a href="mailto:info@adigroup.kz">info@adigroup.kz</a><a href="https://wa.me/77028553327" target="_blank" rel="noopener">WhatsApp ↗</a></div><div class="footer-address"><span class="footer-label" data-i18n="footerAddress">АДРЕС</span><p data-i18n="address">Республика Казахстан,<br>г. Павлодар, ул. Торговая 11/6,<br>офис 15</p></div><div class="footer-nav"><span class="footer-label" data-i18n="footerMenu">НАВИГАЦИЯ</span><a href="#about" data-i18n="navAbout">О компании</a><a href="#services" data-i18n="navServices">Услуги</a><a href="#geography" data-i18n="navGeo">География</a></div></div>
+  <div class="footer-top"><div class="footer-brand"><div class="footer-mark">ADI<span>↗</span></div><p data-i18n="footerDesc">Автомобильные грузоперевозки<br>для корпоративных клиентов.</p></div><div class="footer-contact"><span class="footer-label" data-i18n="footerContact">КОНТАКТЫ</span><a href="tel:+77028553327">+7 702 855 3327</a><a href="mailto:info@adigroup.kz">info@adigroup.kz</a><a href="https://wa.me/77028553327" target="_blank" rel="noopener">WhatsApp ↗</a></div><div class="footer-address"><span class="footer-label" data-i18n="footerAddress">АДРЕС</span><p data-i18n="address">Республика Казахстан,<br>г. Павлодар, ул. Торговая 11/6,<br>офис 15</p></div><div class="footer-nav"><span class="footer-label" data-i18n="footerMenu">НАВИГАЦИЯ</span><a href="#about" data-i18n="navAbout">О компании</a><a href="#services" data-i18n="navServices">Услуги</a><a href="#geography" data-i18n="navGeo">География</a><a href="#faq">FAQ</a></div></div>
   <div class="footer-bottom"><span>© <span id="year"></span> ADI Group Company</span><span data-i18n="footerLegal">ТОО «ADI Group Company» · БИН 170940003684</span><a href="#top" data-i18n="backTop">Наверх ↑</a></div>
 </footer>
 <script src="script.js"></script>
