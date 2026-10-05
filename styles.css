@@ -96,6 +96,10 @@ body{font-family:Inter,Manrope,Arial,sans-serif}h1,h2,h3,.stats b,.cargo b,.faq 
 @media(max-width:680px){.benefits .stats>div,.benefits .stats>div+div{padding:22px 0;border-left:0}.hero{background-position:70% center}}
 
 /* v9.1 — позиция фото: фура правее и выше */
-.hero::before{content:"";position:absolute;z-index:0;right:0;top:-16%;width:68%;height:118%;background:linear-gradient(90deg,rgba(18,22,25,.45),transparent 55%),url(hero-truck.jpg) 50% 50%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.hero::before{content:"";position:absolute;z-index:0;right:0;top:-16%;width:68%;height:118%;background:linear-gradient(90deg,rgba(18,22,25,.45),transparent 55%),url(hero-truck.jpg?v=95) 50% 50%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
 @media(max-width:900px){.hero::before{width:80%}}
 @media(max-width:680px){.hero::before{width:100%;height:46%;top:auto;bottom:48px;background-position:60% 50%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 35%);mask-image:linear-gradient(180deg,transparent 0,#000 35%)}}
+/* услуги: авто / ЖД / склад */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}.svc{position:relative;background:#fff;border:1px solid #e2e4e4;border-top:3px solid #ef8c82;padding:30px 28px 86px;min-height:300px}.svc h3{font-size:24px;line-height:1.2;letter-spacing:-.6px;margin:22px 0 14px}.svc p{font-size:15px;line-height:1.8;color:#687074;margin:0}.svc .round-arrow{position:absolute;left:28px;bottom:26px}.cargo-head{margin:46px 0 0;font-size:20px}
+select{width:100%;padding:14px 12px;font:inherit;border:1px solid #d8dcdc;background:#fff}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr}.svc{min-height:0}}
