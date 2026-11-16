@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#f5f5f4;--panel:#fff;--text:#292d30;--muted:#74797c;--lime:#ef8c82;--line:rgba(45,49,52,.14);--coral:#ef8c82;--brand-gray:#a7a9ab}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:#f5f5f4;color:#292d30;font-family:Manrope,Arial,sans-serif}a{color:inherit;text-decoration:none}
 .header{height:80px;background:#fff;color:#303437;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5.5vw,86px);position:sticky;top:0;z-index:20;border-bottom:1px solid #e8e9e8}
@@ -72,7 +71,7 @@ body{font-size:15px}
 .cargo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}.cargo article{background:#fff;border:1px solid #e2e4e4;border-top:3px solid #ef8c82;padding:24px}.cargo b{font-size:17px;letter-spacing:-.3px}.cargo p{font-size:14px;line-height:1.75;color:#687074;margin:12px 0 0}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border:1px solid #dfe2e2}.stats>div{padding:26px 22px;border-right:1px solid #dfe2e2;display:flex;flex-direction:column;gap:10px}.stats>div:last-child{border:0}.stats b{font-size:18px;line-height:1.3;letter-spacing:-.4px}.stats span{font-size:13px;line-height:1.7;color:#74797c}
 .imap{height:auto;background:#e9ebeb;padding:14px}.imap svg{width:100%;display:block}.kz{fill:#fff;stroke:#b7bbbd;stroke-width:1.5}.routes path{fill:none;stroke:#ef8c82;stroke-width:1.6;stroke-dasharray:5 7;animation:dash 24s linear infinite}@keyframes dash{to{stroke-dashoffset:-240}}
-.node{cursor:pointer}.node circle{fill:#d97870;stroke:#fff;stroke-width:3;transition:r .2s}.node.intl circle{fill:#303639}.node text{font:700 13px Manrope,Arial,sans-serif;fill:#303639;paint-order:stroke;stroke:#fff;stroke-width:4px}.node:hover circle,.node:focus-visible circle,.node.on circle{r:11}.node.hub circle{r:10}.node:focus-visible{outline:none}
+.node{cursor:pointer}.node circle{fill:#d97870;stroke:#fff;stroke-width:3;transition:r .2s}.node.intl circle{fill:#303639}.node text{font:700 13px Inter,Arial,sans-serif;fill:#303639;paint-order:stroke;stroke:#fff;stroke-width:4px}.node:hover circle,.node:focus-visible circle,.node.on circle{r:11}.node.hub circle{r:10}.node:focus-visible{outline:none}
 .map-info{background:#fff;padding:16px 18px;font-size:14px;line-height:1.7;color:#4d5559;margin-top:10px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.map-info .button{padding:11px 14px}
 .faq{background:#fff}.faq-list{margin-top:36px;max-width:860px;border-top:1px solid #dfe2e2}.faq details{border-bottom:1px solid #dfe2e2}.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:800;font-size:17px;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:26px;color:#d97870;transition:transform .2s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{margin:0 0 22px;font-size:15px;line-height:1.85;color:#687074;max-width:700px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.consent{display:flex!important;gap:10px;align-items:flex-start}.consent input{width:18px;height:18px;margin-top:2px;accent-color:#d97870}.consent>span{font-size:12px!important;font-weight:500!important;line-height:1.6;margin:0!important}.consent a{border-bottom:1px solid #ef8c82}.hp{position:absolute;left:-9999px}.form-status.ok{color:#2f7a4d}
@@ -96,10 +95,30 @@ body{font-family:Inter,Manrope,Arial,sans-serif}h1,h2,h3,.stats b,.cargo b,.faq 
 @media(max-width:680px){.benefits .stats>div,.benefits .stats>div+div{padding:22px 0;border-left:0}.hero{background-position:70% center}}
 
 /* v9.1 — позиция фото: фура правее и выше */
-.hero::before{content:"";position:absolute;z-index:0;right:0;top:-16%;width:68%;height:118%;background:linear-gradient(90deg,rgba(18,22,25,.45),transparent 55%),url(hero-truck.jpg?v=95) 50% 50%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.hero::before{content:"";position:absolute;z-index:0;right:0;top:-16%;width:68%;height:118%;background:linear-gradient(90deg,rgba(18,22,25,.45),transparent 55%),url(hero-truck.jpg?v=97) 50% 50%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
 @media(max-width:900px){.hero::before{width:80%}}
 @media(max-width:680px){.hero::before{width:100%;height:46%;top:auto;bottom:48px;background-position:60% 50%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 35%);mask-image:linear-gradient(180deg,transparent 0,#000 35%)}}
 /* услуги: авто / ЖД / склад */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}.svc{position:relative;background:#fff;border:1px solid #e2e4e4;border-top:3px solid #ef8c82;padding:30px 28px 86px;min-height:300px}.svc h3{font-size:24px;line-height:1.2;letter-spacing:-.6px;margin:22px 0 14px}.svc p{font-size:15px;line-height:1.8;color:#687074;margin:0}.svc .round-arrow{position:absolute;left:28px;bottom:26px}.cargo-head{margin:46px 0 0;font-size:20px}
 select{width:100%;padding:14px 12px;font:inherit;border:1px solid #d8dcdc;background:#fff}
 @media(max-width:900px){.svc-grid{grid-template-columns:1fr}.svc{min-height:0}}
+
+/* v9.2 — мобильная адаптация */
+.consent>span span{display:inline!important;margin:0!important;font-size:inherit!important;font-weight:inherit!important}
+.nav-cta{display:none}
+@media(max-width:680px){
+  h2{letter-spacing:-1.2px}
+  .hero h1{letter-spacing:-1.5px}
+  .quick input,.request-form input,.request-form textarea,.request-form select{font-size:16px}
+  .lang{padding:8px 4px;min-height:36px}
+  .menu-toggle{padding:6px 2px;cursor:pointer}
+  .nav a{padding:12px 0;font-size:16px}
+  .nav .nav-cta{display:block;margin-top:8px;padding:14px 16px;text-align:center;background:#292d30;color:#fff;border-radius:3px;font-weight:800}
+  .nav .nav-cta::after{display:none}
+  .imap{padding:8px}
+  .node text{font-size:24px;stroke-width:6px}
+  .node circle{r:10}.node.hub circle{r:13}.node:hover circle,.node:focus-visible circle,.node.on circle{r:14}
+  .map-info{font-size:14px;padding:14px}
+  .map-info .button{width:100%}
+  .service-foot{gap:12px}
+}

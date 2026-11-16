@@ -47,14 +47,18 @@ document.querySelectorAll("[data-i18n-ph]").forEach(el=>el.placeholder=tr(el.dat
 document.querySelectorAll(".request-form [data-i18n=formName]").forEach(()=>{});renderMap();}
 document.querySelectorAll(".lang").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 // ---- menu, year
-document.getElementById("menuToggle").addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
-document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));
+const navEl=document.getElementById("nav"),menuBtn=document.getElementById("menuToggle");
+const setMenu=o=>{navEl.classList.toggle("open",o);menuBtn.setAttribute("aria-expanded",o);menuBtn.textContent=o?"✕":"☰"};
+menuBtn.addEventListener("click",e=>{e.stopPropagation();setMenu(!navEl.classList.contains("open"))});
+navEl.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("click",e=>{if(navEl.classList.contains("open")&&!navEl.contains(e.target))setMenu(false)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
 document.getElementById("year").textContent=new Date().getFullYear();
 // ---- map
-const P=[448,81];const nodes=[{id:"cPvl",x:448,y:81,hub:1},{id:"cAst",x:370,y:106},{id:"cAla",x:447,y:282},{id:"cShy",x:344,y:301},{id:"cRu",x:532,y:30,intl:1},{id:"cCn",x:590,y:262,intl:1},{id:"cUz",x:300,y:330,intl:1}];
+const P=[448,81];const nodes=[{id:"cPvl",x:448,y:81,hub:1},{id:"cAst",x:370,y:106},{id:"cAla",x:447,y:282},{id:"cShy",x:344,y:301,left:1},{id:"cRu",x:532,y:30,intl:1},{id:"cCn",x:590,y:262,intl:1,left:1},{id:"cUz",x:300,y:330,intl:1}];
 function renderMap(){const svg=document.getElementById("kzmap");if(!svg)return;
 svg.querySelector(".routes").innerHTML=nodes.filter(n=>!n.hub).map(n=>`<path d="M${P[0]} ${P[1]} Q${(P[0]+n.x)/2+30} ${(P[1]+n.y)/2-30} ${n.x} ${n.y}"/>`).join("");
-svg.querySelector(".nodes").innerHTML=nodes.map(n=>`<g class="node${n.intl?" intl":""}${n.hub?" hub":""}" tabindex="0" role="button" data-id="${n.id}"><circle cx="${n.x}" cy="${n.y}" r="7"/><text x="${n.x+13}" y="${n.y+4}">${tr(n.id)}</text></g>`).join("");
+svg.querySelector(".nodes").innerHTML=nodes.map(n=>`<g class="node${n.intl?" intl":""}${n.hub?" hub":""}" tabindex="0" role="button" data-id="${n.id}"><circle cx="${n.x}" cy="${n.y}" r="7"/><text x="${n.left?n.x-13:n.x+13}" y="${n.y+4}"${n.left?' text-anchor="end"':""}>${tr(n.id)}</text></g>`).join("");
 svg.querySelectorAll(".node").forEach(g=>{const f=()=>pick(g.dataset.id);g.addEventListener("click",f);g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();f()}})});
 if(window._sel)pick(window._sel);else document.getElementById("mapInfo").textContent=tr("mapHint");}
 function pick(id){window._sel=id;document.querySelectorAll(".node").forEach(g=>g.classList.toggle("on",g.dataset.id===id));const n=nodes.find(x=>x.id===id);const info=document.getElementById("mapInfo");
@@ -69,7 +73,8 @@ if(f.website.value)return;if(!f.consent.checked){st.textContent=tr("fConsentErr"
 if(!f.checkValidity()){f.reportValidity();return}
 const d=Object.fromEntries(new FormData(f));delete d.website;const btn=f.querySelector("button");btn.disabled=true;
 if(FORM_ENDPOINT){try{const r=await fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({...d,lang:currentLang,page:location.href})});if(!r.ok)throw 0;st.textContent=tr("fOk");st.classList.add("ok");f.reset()}catch(_){st.textContent=tr("fErr")}btn.disabled=false;return}
-const body=`Услуга: ${d.service}\nИмя: ${d.name}\nТелефон/WhatsApp: ${d.phone}\nОткуда: ${d.from}\nКуда: ${d.to}\nГруз: ${d.cargo}\nКомментарий: ${d.message}`;
+const svcName=f.service.options[f.service.selectedIndex].text;
+const body=`Услуга: ${svcName}\nИмя: ${d.name}\nТелефон/WhatsApp: ${d.phone}\nОткуда: ${d.from}\nКуда: ${d.to}\nГруз: ${d.cargo}\nКомментарий: ${d.message}`;
 st.textContent=tr("fMail");btn.disabled=false;location.href="mailto:info@adigroup.kz?subject="+encodeURIComponent("Заявка на перевозку — ADI Group")+"&body="+encodeURIComponent(body)});
 let saved=null;try{saved=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang")}catch(e){}
 setLang(saved||"ru");
